@@ -1,0 +1,21 @@
+GetCloudTrailData how many events with a {AttributeKey} of {AttributeValue} occurred on {StartDate}
+GetCloudTrailData how many events with a {AttributeKey} of {AttributeValue} happened {StartDate}
+GetUserActivity what has {Username} been up to on {StartDate}
+GetUserActivity what is {Username} been up to on {StartDate}
+GetUserActivity what has {Username} been up to between {StartDate} and {EndDate}
+LookupByEventName how many {EventName} occurred on {StartDate}
+LookupByEventName how many {EventName} happened {StartDate}
+LookupByEventName how many {EventName} happened between {StartDate} and {EndDate}
+LookupByEventName what is the count of {EventName}
+SetRegion my region is {RegionName}
+SetPositiveTimeOffset my timezone is ahead by {TimeOffset} hours
+SetPositiveTimeOffset my timezone is plus {TimeOffset}
+SetNegativeTimeOffset my timezone is behind by {TimeOffset} hours
+SetNegativeTimeOffset my timezone is minus {TimeOffset}
+GetEventsByDate tell me the count of events between {StartDate} and {EndDate}
+GetEventsByDate tell me the count of events on {StartDate}
+EnableEmail enable email
+DisableEmail disable email
+GetResourceActivity have any {ResourceValue} been modified since {StartDate}
+ValidatePIN my pin is {UserPIN}
+ValidatePIN {UserPIN}

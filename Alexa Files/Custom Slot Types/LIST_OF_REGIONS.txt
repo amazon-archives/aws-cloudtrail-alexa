@@ -1,0 +1,38 @@
+us-east-1
+east
+north virginia
+virginia
+east coast
+us-west-1
+califorina
+us-west-2
+oregon
+ap-south-1
+mumbai
+bombay
+india
+south asia
+ap-northeast-2
+seoul
+korea
+south korea
+ap-southeast-1
+singapore
+ap-southeast-2
+sydney
+australia
+ap-northeast-1
+tokyo
+japan
+eu-central-1
+frankfurt
+germany
+eastern europe
+central europe
+eu-west-1
+ireland
+western wurope
+sa-east-1
+sao paulo
+brazil
+south america

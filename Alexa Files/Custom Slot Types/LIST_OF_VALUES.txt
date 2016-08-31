@@ -1,0 +1,5 @@
+List values that you want to do lookups on.
+All values for Event Names
+All values for Usernames
+All values for Resource Types
+All values for Resource Names

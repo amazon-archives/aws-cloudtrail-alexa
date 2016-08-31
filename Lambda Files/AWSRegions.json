@@ -1,0 +1,61 @@
+{
+    "us-east-1": {
+        "east": "us-east-1", 
+        "north virginia": "us-east-1", 
+        "virginia": "us-east-1",
+        "us east 1": "us-east-1"
+    },
+    "us-west-1": {  
+        "us west 1": "us-west-1",
+        "california": "us-west-1" 
+    },    
+    "us-west-2": {
+        "oregon": "us-west-2",
+        "us west 2": "us-west-2"
+    },    
+    "ap-south-1": {
+        "mumbai": "ap-south-1",
+        "bombay": "ap-south-1",
+        "india": "ap-south-1",
+        "south asia": "ap-south-1"
+    },    
+    "ap-northeast-2": {
+        "seoul": "ap-northeast-2",
+        "korea": "ap-northeast-2",
+        "south korea": "ap-northeast-2",
+        "ap northeast 2": "ap-northeast-2"
+    }, 
+    "ap-southeast-1": {
+        "singapore": "ap-southeast-1",
+        "ap southeast 1": "ap-southeast-1"
+    },
+    "ap-southeast-2": {
+        "sydney":  "ap-southeast-2",
+        "australia":  "ap-southeast-2",
+        "ap southeast 2":  "ap-southeast-2"
+    }, 
+    "ap-northeast-1": {
+        "Tokyo": "ap-northeast-1",
+        "Japan": "ap-northeast-1",
+        "ap northeast 1": "ap-northeast-1"
+    },
+    "eu-central-1": {
+        "frankfurt": "eu-central-1",
+        "germany": "eu-central-1",
+        "eastern europe": "eu-central-1",
+        "central europe": "eu-central-1",
+        "eu central 1": "eu-central-1"
+    },    
+    "eu-west-1": {
+        "ireland": "eu-west-1",
+        "western europe": "eu-west-1",
+        "eu west 1": "eu-west-1"
+    },    
+    "sa-east-1": {
+        "sao paulo": "sa-east-1",
+        "brazil": "sa-east-1",
+        "south america": "sa-east-1",
+        "sa east 1": "sa-east-1"
+    }
+
+}

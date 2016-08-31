@@ -1,0 +1,3 @@
+Resources should be in the form of:
+ServiceName ResourceName
+ex: CloudTrail Trail

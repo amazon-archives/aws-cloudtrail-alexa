@@ -1,0 +1,125 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Metadata": {
+    "AWS::CloudFormation::Designer": {
+      "6ee0b0e3-9f0c-44e0-84de-81ad59fcf431": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 440,
+          "y": 230
+        },
+        "z": 0,
+        "embeds": []
+      },
+      "1bc4b3ee-32fd-408b-9046-262eb15c5ca5": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 150,
+          "y": 230
+        },
+        "z": 0,
+        "embeds": [],
+        "dependson": [
+          "6ee0b0e3-9f0c-44e0-84de-81ad59fcf431"
+        ],
+        "isrelatedto": [
+          "6ee0b0e3-9f0c-44e0-84de-81ad59fcf431"
+        ]
+      },
+      "bb393217-baa1-4525-8b83-b19bafbbaede": {
+        "source": {
+          "id": "1bc4b3ee-32fd-408b-9046-262eb15c5ca5"
+        },
+        "target": {
+          "id": "6ee0b0e3-9f0c-44e0-84de-81ad59fcf431"
+        },
+        "z": 1
+      }
+    }
+  },
+  "Resources": {
+    "AlexaIntegrationWithCloudTrail": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Handler": "index.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "ExecuteAlexaIntegrationWithCloudTrail",
+            "Arn"
+          ]
+        },
+        "Code": {
+          "ZipFile": "AAA"
+        },
+        "Runtime": "nodejs4.3",
+        "Timeout": "60"
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "1bc4b3ee-32fd-408b-9046-262eb15c5ca5"
+        }
+      },
+      "DependsOn": [
+        "ExecuteAlexaIntegrationWithCloudTrail"
+      ]
+    },
+    "ExecuteAlexaIntegrationWithCloudTrail": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": [
+                  "lambda.amazonaws.com"
+                ]
+              },
+              "Action": [
+                "sts:AssumeRole"
+              ]
+            }
+          ]
+        },
+        "ManagedPolicyArns": [
+          "arn:aws:iam::aws:policy/AWSCloudTrailReadOnlyAccess",
+          "arn:aws:iam::aws:policy/AmazonSESFullAccess",
+          "arn:aws:iam::aws:policy/AmazonSNSFullAccess"
+        ],
+        "Path": "/",
+        "Policies": [
+          {
+            "PolicyName": "root",
+            "PolicyDocument": {
+              "Version": "2012-10-17",
+              "Statement": [
+                {
+                  "Effect": "Allow",
+                  "Action": [
+                    "logs:CreateLogGroup",
+                    "logs:CreateLogStream",
+                    "logs:PutLogEvents",
+                    "ses:sendEmail"
+                  ],
+                  "Resource": "*"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "6ee0b0e3-9f0c-44e0-84de-81ad59fcf431"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,3 @@
+EventNames should be in the form of:
+console login
+detach role policy

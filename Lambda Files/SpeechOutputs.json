@@ -1,0 +1,66 @@
+{
+    "welcomeResponse": {
+       "welcome": "Welcome to the Alexa Integration with Cloud Trail. ",
+       "reprompt": "Please enter your PIN ",
+       "noPINSet": "Error. Cannot perform request until PIN has been set."
+    },
+    "setRegion": {
+        "success": "Region set as {0}",
+        "failure": "You have given an invalid region. Please try again"
+    },
+    "sendEmail": {
+        "success": "An email was sent to {0}",
+        "failure": " There was an error sending the email response."
+    },
+    "emailSwitch": {
+        "success": "Email services have been {0}"
+    },
+    "lookup": {
+        "noLookupAttribute": "Error. No lookup attribute was given.",
+        "invalidLookupAttribute": "You have entered an invalid lookup attribute. Please try again.",
+        "noLookupValue": "Error. No lookup value was given.",
+        "invalidLookupValue": "You have entered an invalid lookup value. Please try again.",
+        "lookupFailed": "Error. CloudTrail Lookup failed. Make sure you have CloudTrail read-only permission"
+    },
+    "getEventCount": {
+        "start": "The number of events ",
+        "lookupVariables": "with a {0} of {1} ",
+        "dates": "at the specified dates ",
+        "end": "is {0}.",
+        "attributeError": "Error. Only a lookup value or a lookup attribute was given, but not both."
+        
+    },
+    "getUserActivity": {
+        "start": "{0} has done {1} unique actions and {2} total actions",
+        "dates": " at the specified dates",
+        "listEvents": ". The actions done by {0} include {1}",
+        "usernameError": "Error. No username was given."
+    },
+    "setTimeOffset": "Offset has been set as {0}{1} hours",
+    "reprompt": {
+        "start": "You can ",
+        "middle": " by saying, ",
+        "randomReprompt": {
+            "look up events by a certain attribute": "how many events with an event name of detach role policy occurred on may 31st",
+            "set your region": "my region is U S east one or California",
+            "set your time offset": "my time offset is ahead by eight hours",
+            "enable email services": "enable email",
+            "disable email services": "disable email",
+            "ask about user activity": "what has Bob been up to",
+            "look up events by event name": "how many console logins happened today",
+            "hear how many events happened in a specific timeframe": "tell me the count of events between yesterday and today"
+        }
+    },
+    "resourceActivity": {
+        "activity": "At least one {0} has been modified since the given date",
+        "noActivity": "No {0}s have been modified since the given date"
+    },
+    "validateUserPIN" : {
+        "success": "PIN has been validated",
+        "failure": "Error. Invalid PIN entered",
+        "alreadyValid": "You have already validated your PIN"
+    },
+    "logInToCloudTrail" : {
+        "accessDenied": "Error. Tried to log into an account with invalid credentials. "
+    }
+}
