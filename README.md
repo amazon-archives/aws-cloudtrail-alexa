@@ -17,7 +17,7 @@ You can look up, create, delete, and update API events for the last seven days. 
 
 ## Getting Started
 
-**Option One** – If yourCloudTrail trails and Lambda function belong to the same AWS account, follow step one. In step one, use the AWS CloudFormation template to create the IAM role and Lambda function. You can skip steps two and three.
+**Option One** – If your CloudTrail trails and Lambda function belong to the same AWS account, follow step one. In step one, use the AWS CloudFormation template to create the IAM role and Lambda function. You can skip steps two and three.
 
 **Option Two** – If your CloudTrail trails and Lambda function belong to separate AWS accounts, skip step one. In steps two and three, you manually create the IAM role and Lambda function.
 
@@ -148,21 +148,21 @@ You can now use this app with an Alexa device linked with the Amazon Developer a
 
 **Variables**:
 
-**phoneNumber** – The phone number that you want your one-time password to be sent to. This is required if you want to have one-time passwords (a random PIN) sent to your phone. You must include the country code (ex. '+1' for the United States)
+**PHONE\_NUMBER** – The phone number that you want your one-time password to be sent to. This is required if you want to have one-time passwords (a random PIN) sent to your phone. You must include the country code (ex. '+1' for the United States)
 
-**APP\_ID\*** – The application ID of your Alexa skill. You can find this value on the **Skill Information** page for your Alexa skill.
+**APP\_ID** \* – The application ID of your Alexa skill. You can find this value on the **Skill Information** page for your Alexa skill.
 
-**ACCOUNT\_NUMBER\*** – Your 12-digit AWS account number that has the trails you want to look up. **Note**: Make this value null if the CloudTrail trails and the Lambda function belong to the same AWS account.
+**ACCOUNT\_NUMBER** \* – Your 12-digit AWS account number that has the trails you want to look up. **Note**: Make this value null if the CloudTrail trails and the Lambda function belong to the same AWS account.
 
-**EXTERNAL\_ID\*** – The external ID you specified in the role to look up the trails that belong to another AWS account. **Note**: Make this value null if the CloudTrail trails and the Lambda function belong to the same AWS account.
+**EXTERNAL\_ID** \* – The external ID you specified in the role to look up the trails that belong to another AWS account. **Note**: Make this value null if the CloudTrail trails and the Lambda function belong to the same AWS account.
 
 **USE\_MULTIFACTOR\_AUTHORIZATION** – A Boolean for using multi-factor authorization. The default is true. Set to false if the Lambda function doesn't use multi-factor authorization.
 
 **PIN** – An optional hard-coded PIN. The default is null.
 
-**recipientEmails\*\*** – An array of emails that you want Alexa to send emails to.
+**recipientEmails** \*\* – An array of emails that you want Alexa to send emails to.
 
-**sourceEmail\*\*** – The email that Alexa says the emails are from.
+**sourceEmail** \*\* – The email that Alexa says the emails are from.
 
 **eventNames** – The list of event names that you want to look up, such as ConsoleLogin, CreateBucket, and DeleteTrail.
 
@@ -180,7 +180,7 @@ After you update the variables for the Lambda function, you can use this app wit
 
 ## Creating a Custom Look up Function
 
-You can create a custom functionso that you can ask Alexa questions that are specific to your trail and AWS account. For example, you can create a custom function that looks up how many trails have been deleted since a specified date.
+You can create a custom function so that you can ask Alexa questions that are specific to your trail and AWS account. For example, you can create a custom function that looks up how many trails have been deleted since a specified date.
 
 ### Step One: Customizing the Alexa skill
 1. Sign in to the Amazon Developer Portal and choose your Alexa CloudTrail skill. 
@@ -248,8 +248,8 @@ Where:
 - **intent** – Request sent by Alexa.
 - **session** – Contains information about the current series of calls, including data passed in between calls.
 - **response** – Object used to send a response to Alexa.
-- **attributeKey\*** – The lookupAttribute. This can be a literal like "EventName" or a variable in the form of intent.intent.slots.VariableName.value.
-- **attributeValue\*** – The lookupValue. This can be a literal like "ConsoleLogin" or a variable in the form of intent.intent.slots.VariableName.value.
+- **attributeKey** \* – The lookupAttribute. This can be a literal like "EventName" or a variable in the form of intent.intent.slots.VariableName.value.
+- **attributeValue** \* – The lookupValue. This can be a literal like "ConsoleLogin" or a variable in the form of intent.intent.slots.VariableName.value.
 - **outputGenerator** – Name of a function to generate your speech output.
 - **startDate** and **endDate** – Date strings. This can be a literal such as "2016-07-29" or a variable in the form of intent.intent.slots.VariableName. The value can also be null.
 
